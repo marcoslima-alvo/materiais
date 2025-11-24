@@ -1,59 +1,184 @@
 
 <!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Boas-vindas aos Alunos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-         s="header-hero">
-      <div class="container">
-        <h1 class="display-5">Bem-vindos, queridos alunos!</h1>
-        <p class="lead">É uma alegria ter vocês aqui. Vamos juntos aprender, crescer e conquistar grandes resultados ao longo da unidade.
-          No final, lembrem-se: <strong>Voe Alto 🚀🚀🚀</strong></p>
-      </div>
-    </header>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bem-vindos | Prof. Marcos Rodrigo Lima</title>
+  <meta name="description" content="Página de boas-vindas para alunos e alunas, com conteúdo sobre Curva ABC e materiais para download." />
 
-    <main class="container pb-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="card p-4 p-md-5">
-            <h2 class="h5 mb-3">Base de dados: Curva ABC</h2>
-            <p>Disponibilize o arquivo <code>Curva_ABC.xlsx</code> na mesma pasta deste site.
-               Em Windows, ele pode estar em <code>C:\Users\marcos.rlima\Downloads</code>.
-               Para funcionar no site, copie-o para a pasta pública (junto do <code>index.html</code>).</p>
+  <!-- Bootstrap 5 CSS via CDN -->
+  https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
 
-            <div class="d-flex gap-2 flex-wrap">
-              Curva_ABC.xlsxBaixar Curva_ABC.xlsx</a>
-              #uploadIr para Upload da Planilha</a>
-            </div>
+  <!-- Styles: leve, responsivo, acessível -->
+  <style>
+    :root {
+      --brand-bg: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+      --card-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
 
-            <hr class="my-4">
-            <h3 id="upload" class="h5">Upload de Planilhas (Curva ABC)</h3>
-            <p>Envie sua planilha <code>.xlsx</code> para avaliação. (É necessário um backend para processar.)</p>
-            <form action="/upload" method="post"-3">
-                <label class="form-label" for="planilha">Selecione a planilha</label>
-                <input class="form-control" type="file" id="planilha" name="planilha" accept=".xlsx,.xls" required>
-              </div>
-              <button class="btn btn-success" type="submit">Enviar</button>
-            </form>
+    .hero {
+      background: var(--brand-bg);
+      color: #fff;
+      padding: 4rem 1rem;
+    }
+    .hero h1 {
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .hero p.lead {
+      max-width: 800px;
+    }
+
+    .card {
+      border: none;
+      box-shadow: var(--card-shadow);
+      border-radius: 1rem;
+    }
+
+    .section-title {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    /* Botão de download grande para facilitar toque no celular */
+    .download-btn {
+      padding: 0.9rem 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    blockquote {
+      border-left: 4px solid #0d6efd;
+      padding-left: 1rem;
+      margin-left: 0.25rem;
+      color: #343a40;
+      font-style: italic;
+    }
+
+    footer {
+      background: #f8f9fa;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .rocket {
+      font-size: 1.35rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero / Boas-vindas -->
+  <header class="hero text-center">
+    <div class="container">
+      <h1 class="mb-3">Bem-vindos, alunos e alunas! 👋</h1>
+      <p class="lead mx-auto">
+        Esta é a sua página de apoio para estudar, praticar e avançar.
+        Aqui você encontra materiais, explicações e desafios pensados para facilitar o acesso
+        pelo <strong>celular</strong> e pelo <strong>notebook</strong>.
+      </p>
+      <div class="mt-4">
+        <!-- Botão de download (ajuste o href com seu arquivo) -->
+        <a href="./downloads/Curva_ABC.xlsx" class="btn btn-light download-btn" download
+             <p class="mt-2 mb-0" style="opacity:0.85;">
+        <small>Se preferir, o arquivo pode ser PDF: <code>./downloads/Curva_ABC.pdf</code></small>
+      </p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- Curva ABC: Fundamentos -->
+    <section class="mb-4">
+      <h2 class="section-title mb-3">O que é a Curva ABC (Fundamentos)</h2>
+      <div class="card p-4">
+        <p>
+          A <strong>Curva ABC</strong> é uma técnica de classificação de itens (estoque, clientes, produtos)
+          baseada na sua <strong>importância econômica</strong>, geralmente ligada ao valor de consumo ao longo de um período.
+          Sua lógica se inspira no <em>Princípio de Pareto</em> (80/20): uma pequena parcela dos itens costuma responder
+          por grande parte do valor movimentado.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5 class="fw-bold">Categorias típicas</h5>
+            <ul>
+              <li><strong>A</strong>: itens mais críticos, costumam representar ~70–80% do <em>valor total</em> com ~10–20% das quantidades.</li>
+              <li><strong>B</strong>: importância intermediária, ~15–25% do valor.</li>
+              <li><strong>C</strong>: muitos itens de baixo impacto, ~5–10% do valor.</li>
+            </ul>
+            <p class="mb-0"><small><em>Observação:</em> Faixas são referências, não regras fixas. Devem ser ajustadas à realidade da operação.</small></p>
           </div>
+          <div class="col-md-6">
+            <h5 class="fw-bold">Como calcular (passo a passo)</h5>
+            <ol>
+              <li>Liste os itens e obtenha: <strong>quantidade</strong> consumida no período e <strong>preço</strong> (ou custo médio).</li>
+              <li>Calcule o <strong>Valor de Consumo Anual (VCA)</strong>: <code>VCA = Quantidade × Preço</code>.</li>
+              <li>Ordene os itens <strong>do maior para o menor VCA</strong>.</li>
+              <li>Some o VCA acumulado e calcule o <strong>% acumulado</strong> sobre o total.</li>
+              <li>Defina os cortes A/B/C (ex.: A até ~75–80%, B até ~90–95%, C o restante).</li>
+              <li>Estabeleça <strong>políticas</strong> distintas: nível de serviço, reposição, frequência de compras e controles.</li>
+            </ol>
+          </div>
+        </div>
 
-          <div class="text-center mt-4">
-            <p class="mb-1"><strong>Voe Alto 🚀🚀🚀</strong></p>
-            https://www.linkedin.com/in/marcoslima-alvo/
-              LinkedIn: Marcos Rodrigo Lima
-            </a>
+        <hr class="my-4" />
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5 class="fw-bold">Por que usar?</h5>
+            <ul>
+              <li>Foco nos itens que mais impactam <strong>custo, capital imobilizado e nível de serviço</strong>.</li>
+              <li>Melhora de <strong>planejamento de compras</strong> e <strong>política de estoques</strong>.</li>
+              <li>Priorização de análises e auditorias.</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 class="fw-bold">Boas práticas</h5>
+            <ul>
+              <li>Revisar a curva periodicamente (sazonalidade e mudanças de preço).</li>
+              <li>Combinar com outras análises (ex.: <strong>XYZ</strong> por variabilidade de demanda).</li>
+              <li>Considerar riscos e criticidade além do valor (segurança, regulamentação, lead time).</li>
+            </ul>
           </div>
         </div>
       </div>
-    </main>
+    </section>
 
-    <footer class="footer">
-      <div class="container">
-        <small>Feito com Bootstrap 5</small>
+    <!-- Mensagem motivacional -->
+    <section>
+      <h2 class="section-title mb-3">Mensagem de motivação</h2>
+      <div class="card p-4">
+        <blockquote>
+          “Algumas pessoas querem que aconteça, outras desejam que aconteça, e outras fazem acontecer.”
+        </blockquote>
+        <p class="mb-0"><strong>— Michael Jordan</strong></p>
       </div>
-    </footer>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <!-- Encerramento -->
+    <section class="text-center mt-5">
+      <h3 class="fw-bold">Voe Alto <span class="rocket">🚀🚀🚀</span></h3>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container text-center">
+      <p class="mb-1">Professor: <strong>Marcos Rodrigo Lima</strong></p>
+      <p class="mb-2">Dicas, materiais e desafios estarão sempre por aqui.</p>
+      https://www.linkedin.com/in/marcoslima-alvo/
+        Meu LinkedIn: linkedin.com/in/marcoslima-alvo/
+      </a>
+      <div class="mt-3">
+        <small class="text-muted">© <span id="year"></span> — Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS via CDN -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-cC8m9QnP3vXaqRr6XoGfY0u4fSgG7eKpWvWm9k3e4psYsdgk8I0nRk4KqOFSYVfF"
+   etFullYear();
+  </script>
+</body>
